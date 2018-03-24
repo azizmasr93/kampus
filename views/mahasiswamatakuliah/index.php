@@ -1,0 +1,34 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\MahasiswamatakuliahSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Mahasiswamatakuliahs';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="mahasiswamatakuliah-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Mahasiswamatakuliah', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            //'id_mhsmakul',
+            'kd_makul',
+            'id_mhs',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+</div>
