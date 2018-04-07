@@ -47,9 +47,9 @@ class Presensi extends \yii\db\ActiveRecord
     {
         return [
             'id_presensi' => 'Id Presensi',
-            'kd_makul' => 'Kd Makul',
-            'id_mhs' => 'Id Mhs',
-            'tgl' => 'Tgl',
+            'kd_makul' => 'Mata Kuliah',
+            'id_mhs' => 'Mahasiswa',
+            'tgl' => 'Tanggal',
             'waktu' => 'Waktu',
         ];
     }
